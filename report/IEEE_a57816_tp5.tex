@@ -572,6 +572,28 @@
   \end{table}
   
   
+ \begin{table}[H]
+  \caption{Performance events (naive vs. interchange) para o nó compute-431}
+  \label{table:search_events}
+  \centering
+  \begin{tabular}{ | l | r | r |   }
+
+  \hline
+  \# EVENT NAME	 & NAIVE  & INTERCHANGE \\ \hline 
+   Elapsed time & &  \\ \hline    
+  instructions	& 3704300000 &  samples \\ \hline    
+cycles	& 1332700000 &  samples \\ \hline    
+cache-references	& 1200000 &  samples \\ \hline    
+cache-misses	& 200000 &  samples \\ \hline    
+LLC-loads	& 1000000 &  samples \\ \hline    
+LLC-load-misses	& 0 &  samples \\ \hline    
+dTLB-load-misses	& 0 &  samples \\ \hline    
+branches	& 471800000 &  samples \\ \hline    
+branch-misses	& 400000 &  samples \\ \hline    
+
+  \end{tabular}
+  \end{table}
+
 
 
 
@@ -585,15 +607,15 @@
   \hline
   \# EVENT NAME	 & NAIVE  & INTERCHANGE \\ \hline   
   Elapsed time & &  \\ \hline    
-  instructions	& samples &  samples \\ \hline    
-cycles	& samples &  samples \\ \hline    
-cache-references	& samples &  samples \\ \hline    
-cache-misses	& samples &  samples \\ \hline    
-LLC-loads	& samples &  samples \\ \hline    
-LLC-load-misses	& samples &  samples \\ \hline    
-dTLB-load-misses	& samples &  samples \\ \hline    
-branches	& samples &  samples \\ \hline    
-branch-misses	& samples &  samples \\ \hline    
+  instructions	& 37K samples  \\ \hline    
+cycles	&  13K samples  \\ \hline    
+cache-references	& 12 samples &  samples \\ \hline    
+cache-misses	& 2 samples &  samples \\ \hline    
+LLC-loads	& samples &  10 samples \\ \hline    
+LLC-load-misses	& 0 samples &  samples \\ \hline    
+dTLB-load-misses	& 0 samples &  samples \\ \hline    
+branches	& samples &  4K samples \\ \hline    
+branch-misses	& samples & 4 samples \\ \hline    
 
    \end{tabular}
   \end{table}

@@ -1,0 +1,25 @@
+[a57816@search6 ESC_FLAME_GRAPH]$ perf report --stdio --sort comm,dso
+[kernel.kallsyms] with build id 09b53ce5dfe09c7b1ad9473e1356d7d922512e27 not found, continuing without symbols
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 808  of event 'cpu-clock'
+# Event count (approx.): 808
+#
+# Overhead  Command  Shared Object    
+# ........  .......  .................
+#
+    97.03%  naive    naive            
+     2.48%  naive    libc-2.12.so     
+     0.50%  naive    [kernel.kallsyms]
+
+
+# Samples: 22  of event 'faults'
+# Event count (approx.): 1157
+#
+# Overhead  Command  Shared Object    
+# ........  .......  .................
+#
+    63.61%  naive    naive            
+    29.73%  naive    libc-2.12.so     
+     6.48%  naive    ld-2.12.so       
+     0.17%  naive    [kernel.kallsyms]

@@ -1,0 +1,28 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf stat -e cpu-cycles,instructions,cache-references,cache-misses,branch-instructions,branch-misses,bus-cycles,L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,L1-dcache-store-misses,LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses,dTLB-load-misses,dTLB-store-misses,iTLB-load-misses,branch-loads,branch-load-misses ./naive
+
+ Performance counter stats for './naive':
+
+         535187277      cpu-cycles                [20.25%]
+        1044692763      instructions              #    1.95  insns per cycle         [25.37%]
+           8196140      cache-references                                             [25.37%]
+             36522      cache-misses              #    0.446 % of all cache refs     [25.57%]
+         126101720      branch-instructions                                          [27.67%]
+            258384      branch-misses             #    0.20% of all branches         [28.04%]
+                 0      bus-cycles                                                  
+         246027409      L1-dcache-loads                                              [22.50%]
+          56436199      L1-dcache-load-misses     #   22.94% of all L1-dcache hits   [22.39%]
+           9973628      L1-dcache-stores                                             [22.27%]
+            322982      L1-dcache-store-misses                                       [22.16%]
+           7391770      LLC-loads                                                    [22.05%]
+              2671      LLC-load-misses           #    0.04% of all LL-cache hits    [21.94%]
+            218407      LLC-stores                                                   [10.92%]
+             18512      LLC-store-misses                                             [10.86%]
+              2239      dTLB-load-misses                                             [16.21%]
+               446      dTLB-store-misses                                            [21.51%]
+                 0      iTLB-load-misses                                             [21.41%]
+         129163483      branch-loads                                                 [21.22%]
+           5688441      branch-load-misses                                           [20.73%]
+
+       0.210071197 seconds time elapsed
+
+

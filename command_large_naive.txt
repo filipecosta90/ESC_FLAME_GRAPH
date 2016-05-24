@@ -1,0 +1,4 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf record -c 100000 -e cpu-cycles,instructions,cache-references,cache-misses,LLC-loads,LLC-load-misses,dTLB-load-misses,branches,branch-misses ./large_naive
+[ perf record: Woken up 11 times to write data ]
+[ perf record: Captured and wrote 2.540 MB perf.data (66318 samples) ]
+

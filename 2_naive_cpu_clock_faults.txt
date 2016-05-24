@@ -1,0 +1,8 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf stat -e cpu-clock,faults ./naive
+
+ Performance counter stats for './naive':
+
+        196.395754      cpu-clock (msec)                                            
+               844      faults                                                      
+
+       0.200874285 seconds time elapsed

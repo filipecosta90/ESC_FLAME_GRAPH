@@ -1,99 +1,90 @@
 # To display the perf.data header info, please use --header/--header-only options.
 #
-# Samples: 21K of event 'cpu-cycles'
-# Event count (approx.): 2195100000
+# Samples: 783K of event 'cpu-cycles'
+# Event count (approx.): 78390700000
 #
-# Overhead       Samples  Command      Shared Object      Symbol                        
-# ........  ............  ...........  .................  ..............................
+# Overhead       Samples  Command      Shared Object      Symbol                           
+# ........  ............  ...........  .................  .................................
 #
-    98.70%         21665  large_naive  large_naive        [.] multiply_matrices         
-     0.25%            55  large_naive  large_naive        [.] initialize_matrices       
-     0.24%            52  large_naive  libc-2.12.so       [.] __random                  
-     0.18%            40  large_naive  libc-2.12.so       [.] __random_r                
-     0.11%            24  large_naive  [kernel.kallsyms]  [k] clear_page_c              
+    99.59%        780656  large_naive  large_naive        [.] run_no_events                
 
 
-# Samples: 39K of event 'instructions'
-# Event count (approx.): 3916400000
+# Samples: 383K of event 'instructions'
+# Event count (approx.): 38376000000
 #
-# Overhead       Samples  Command      Shared Object      Symbol                          
-# ........  ............  ...........  .................  ................................
+# Overhead       Samples  Command      Shared Object      Symbol                                   
+# ........  ............  ...........  .................  .........................................
 #
-    96.97%         37977  large_naive  large_naive        [.] multiply_matrices           
-     1.51%           590  large_naive  large_naive        [.] initialize_matrices         
-     0.77%           303  large_naive  libc-2.12.so       [.] __random                    
-     0.23%            91  large_naive  libc-2.12.so       [.] rand                        
-     0.19%            75  large_naive  libc-2.12.so       [.] __random_r                  
-     0.13%            49  large_naive  large_naive        [.] rand@plt                    
+    99.24%        380835  large_naive  large_naive        [.] run_no_events                        
+     0.20%           760  large_naive  large_naive        [.] initialize_matrices                  
 
 
-# Samples: 355  of event 'cache-references'
-# Event count (approx.): 35500000
+# Samples: 47K of event 'cache-references'
+# Event count (approx.): 4744200000
 #
-# Overhead       Samples  Command      Shared Object      Symbol               
-# ........  ............  ...........  .................  .....................
+# Overhead       Samples  Command      Shared Object      Symbol                      
+# ........  ............  ...........  .................  ............................
 #
-    98.31%           349  large_naive  large_naive        [.] multiply_matrices
-     0.56%             2  large_naive  [kernel.kallsyms]  [k] clear_page_c     
-     0.28%             1  large_naive  [kernel.kallsyms]  [k] __run_hrtimer    
-     0.28%             1  large_naive  [kernel.kallsyms]  [k] account_user_time
-     0.28%             1  large_naive  [kernel.kallsyms]  [k] run_timer_softirq
-     0.28%             1  large_naive  [kernel.kallsyms]  [k] scheduler_tick   
+    99.87%         47382  large_naive  large_naive        [.] run_no_events           
 
 
-# Samples: 2  of event 'cache-misses'
-# Event count (approx.): 200000
+# Samples: 40K of event 'cache-misses'
+# Event count (approx.): 4008300000
 #
-# Overhead       Samples  Command      Shared Object      Symbol               
-# ........  ............  ...........  .................  .....................
+# Overhead       Samples  Command      Shared Object      Symbol                      
+# ........  ............  ...........  .................  ............................
 #
-    50.00%             1  large_naive  [kernel.kallsyms]  [k] clear_page_c     
-    50.00%             1  large_naive  large_naive        [.] multiply_matrices
+    99.94%         40057  large_naive  large_naive        [.] run_no_events           
 
 
-# Samples: 359  of event 'LLC-loads'
-# Event count (approx.): 35900000
+# Samples: 48K of event 'LLC-loads'
+# Event count (approx.): 4815000000
 #
-# Overhead       Samples  Command      Shared Object      Symbol               
-# ........  ............  ...........  .................  .....................
+# Overhead       Samples  Command      Shared Object      Symbol                           
+# ........  ............  ...........  .................  .................................
 #
-    99.44%           357  large_naive  large_naive        [.] multiply_matrices
-     0.28%             1  large_naive  [kernel.kallsyms]  [k] _spin_lock       
-     0.28%             1  large_naive  [kernel.kallsyms]  [k] update_vsyscall  
+    99.95%         48125  large_naive  large_naive        [.] run_no_events                
 
 
-# Samples: 0  of event 'LLC-load-misses'
-# Event count (approx.): 0
+# Samples: 40K of event 'LLC-load-misses'
+# Event count (approx.): 4073600000
 #
-# Overhead       Samples  Command  Shared Object  Symbol
-# ........  ............  .......  .............  ......
+# Overhead       Samples  Command      Shared Object      Symbol                      
+# ........  ............  ...........  .................  ............................
 #
+    99.98%         40728  large_naive  large_naive        [.] run_no_events           
 
 
-# Samples: 0  of event 'dTLB-load-misses'
-# Event count (approx.): 0
+# Samples: 11  of event 'dTLB-load-misses'
+# Event count (approx.): 1100000
 #
-# Overhead       Samples  Command  Shared Object  Symbol
-# ........  ............  .......  .............  ......
+# Overhead       Samples  Command      Shared Object  Symbol           
+# ........  ............  ...........  .............  .................
 #
+   100.00%            11  large_naive  large_naive    [.] run_no_events
 
 
-# Samples: 4K of event 'branches'
-# Event count (approx.): 448300000
+# Samples: 39K of event 'branches'
+# Event count (approx.): 3923900000
 #
-# Overhead       Samples  Command      Shared Object      Symbol                        
-# ........  ............  ...........  .................  ..............................
+# Overhead       Samples  Command      Shared Object      Symbol                           
+# ........  ............  ...........  .................  .................................
 #
-    99.89%          4478  large_naive  large_naive        [.] multiply_matrices         
+    98.83%         38780  large_naive  large_naive        [.] run_no_events                
+     0.32%           126  large_naive  large_naive        [.] initialize_matrices          
+     0.20%            78  large_naive  libc-2.12.so       [.] __random_r                   
 
 
-# Samples: 4  of event 'branch-misses'
-# Event count (approx.): 400000
+# Samples: 22  of event 'branch-misses'
+# Event count (approx.): 2200000
 #
-# Overhead       Samples  Command      Shared Object      Symbol               
-# ........  ............  ...........  .................  .....................
+# Overhead       Samples  Command      Shared Object      Symbol                      
+# ........  ............  ...........  .................  ............................
 #
-    75.00%             3  large_naive  large_naive        [.] multiply_matrices
-    25.00%             1  large_naive  [kernel.kallsyms]  [k] update_wall_time 
+    81.82%            18  large_naive  large_naive        [.] run_no_events           
+     4.55%             1  large_naive  [kernel.kallsyms]  [k] __run_hrtimer           
+     4.55%             1  large_naive  [kernel.kallsyms]  [k] autoremove_wake_function
+     4.55%             1  large_naive  [kernel.kallsyms]  [k] retint_careful          
+     4.55%             1  large_naive  [kernel.kallsyms]  [k] smp_apic_timer_interrupt
 
 

@@ -1,0 +1,28 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf stat -e cpu-cycles,instructions,cache-references,cache-misses,branch-instructions,branch-misses,bus-cycles,L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,L1-dcache-store-misses,LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses,dTLB-load-misses,dTLB-store-misses,iTLB-load-misses,branch-loads,branch-load-misses ./interchange
+
+ Performance counter stats for './interchange':
+
+         399561216      cpu-cycles                [21.57%]
+        1152237507      instructions              #    2.88  insns per cycle         [27.27%]
+            429971      cache-references                                             [27.74%]
+             43034      cache-misses              #   10.009 % of all cache refs     [28.20%]
+         132065934      branch-instructions                                          [28.66%]
+            249858      branch-misses             #    0.19% of all branches         [28.22%]
+                 0      bus-cycles                                                  
+         253077242      L1-dcache-loads                                              [21.87%]
+           7577858      L1-dcache-load-misses     #    2.99% of all L1-dcache hits   [21.24%]
+         128034804      L1-dcache-stores                                             [20.60%]
+            106020      L1-dcache-store-misses                                       [20.38%]
+            262810      LLC-loads                                                    [22.23%]
+              1001      LLC-load-misses           #    0.38% of all LL-cache hits    [22.08%]
+             69369      LLC-stores                                                   [10.96%]
+                 0      LLC-store-misses                                             [10.88%]
+               950      dTLB-load-misses                                             [16.21%]
+                 9      dTLB-store-misses                                            [21.47%]
+                 0      iTLB-load-misses                                             [21.33%]
+         129898962      branch-loads                                                 [21.19%]
+           5560030      branch-load-misses                                           [21.05%]
+
+       0.159788849 seconds time elapsed
+
+

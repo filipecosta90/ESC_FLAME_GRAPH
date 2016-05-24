@@ -1,0 +1,38 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf report --stdio
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 808  of event 'cpu-clock'
+# Event count (approx.): 808
+#
+# Overhead  Command  Shared Object      Symbol                          
+# ........  .......  .................  ................................
+#
+    94.68%  naive    naive              [.] multiply_matrices           
+     2.10%  naive    naive              [.] initialize_matrices         
+     1.36%  naive    libc-2.12.so       [.] __random                    
+     0.87%  naive    libc-2.12.so       [.] __random_r                  
+     0.25%  naive    [kernel.kallsyms]  [k] __mem_cgroup_commit_charge  
+     0.25%  naive    naive              [.] rand@plt                    
+     0.12%  naive    [kernel.kallsyms]  [k] __call_rcu                  
+     0.12%  naive    [kernel.kallsyms]  [k] __mem_cgroup_uncharge_common
+     0.12%  naive    libc-2.12.so       [.] malloc                      
+     0.12%  naive    libc-2.12.so       [.] rand                        
+
+
+# Samples: 22  of event 'faults'
+# Event count (approx.): 1157
+#
+# Overhead  Command  Shared Object      Symbol                 
+# ........  .......  .................  .......................
+#
+    63.61%  naive    naive              [.] initialize_matrices
+    29.56%  naive    libc-2.12.so       [.] __init_cpu_features
+     5.62%  naive    ld-2.12.so         [.] dl_main            
+     0.52%  naive    ld-2.12.so         [.] _dl_setup_hash     
+     0.26%  naive    ld-2.12.so         [.] _dl_start          
+     0.17%  naive    [kernel.kallsyms]  [k] __clear_user       
+     0.17%  naive    libc-2.12.so       [.] __strstr_sse2      
+     0.09%  naive    ld-2.12.so         [.] _start             
+
+
+

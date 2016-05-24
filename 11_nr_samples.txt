@@ -1,0 +1,16 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf report --stdio --show-nr-samples --dsos=naive
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# dso: naive
+# Samples: 1K of event 'cpu-clock'
+# Event count (approx.): 1636
+#
+# Overhead       Samples  Command  Symbol                 
+# ........  ............  .......  .......................
+#
+    94.74%          1550  naive    [.] multiply_matrices  
+     1.47%            24  naive    [.] initialize_matrices
+     0.06%             1  naive    [.] rand@plt           
+
+
+

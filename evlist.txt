@@ -1,0 +1,11 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$     perf evlist -F
+cpu-cycles: sample_freq=100000
+instructions: sample_freq=100000
+cache-references: sample_freq=100000
+cache-misses: sample_freq=100000
+LLC-loads: sample_freq=100000
+LLC-load-misses: sample_freq=100000
+dTLB-load-misses: sample_freq=100000
+branches: sample_freq=100000
+branch-misses: sample_freq=100000
+

@@ -439,8 +439,9 @@
   \section{Contextualização das métricas de performance em estudo}
 
   \section{Caracterização do Hardware do ambiente de testes}
-  Especificadas as métricas de performance em estudo, resta-nos especificar os ambientes de teste nos quais pretendemos realizar as benchmarks. Através da análise do hardware disponível no Search6 \footnote{Services and Advanced Research Computing with HTC/HPC clusters}, uma das nossas plataformas de teste, foram seleccionados nós do tipo compute-431, sendo a disponibilidade global dos mesmos o principal factor. Iremos ainda incluir no caso de estudo o \textbf{student laptop} dado que pretendemos, para a primeira fase do caso de estudo recorrer à ferramenta \textbf{dtrace} como forma de monitorização da criação e terminação de "light-weight processes". Nas tabelas \ref{table:characterization_search} e \ref{table:characterization_laptop} encontram-se especificadas as principais características dos sistemas em teste.\par 
-
+  
+  Especificadas as métricas de performance em estudo, resta-nos especificar os ambientes de teste nos quais pretendemos realizar as benchmarks. \par 
+  Através da análise do hardware disponível no Search6 \footnote{Services and Advanced Research Computing with HTC/HPC clusters}, uma das nossas plataformas de teste, foram seleccionados nós do tipo compute-431, e compute 651,sendo a disponibilidade global dos mesmos o principal factor. Nas tabelas \ref{table:characterization_431} e \ref{table:characterization_651} encontram-se especificadas as principais características dos sistemas em teste.\par 
 
   \begin{table}[H]
   \caption{Características de Hardware do nó 431}
@@ -463,13 +464,27 @@
   \#Memory Channels & 3 \\ \hline
   Memória Ram Disponível & 48GB \\ \hline
   Peak Memory BW Fab. CPU  & 32 GB/s \\ \hline
-
+	
   \end{tabular}
   \end{table}
+
+
+  \section{Determinação do tamanho dos datasets}
+
+sqrt( (12288KB / 4 bytes ) / 3 ) = 1011 
+
+
 
   \section{Determinação do tempo médio necessário para criar e  terminar um fio de execução}
   \subsection{Nós compute-431}
   Por forma a calcular o tempo médio necessário para criar e terminar um fio de execução foi criado um kernel, que apenas realizava essas mesmas operações e registados os valores para os diferentes número de threads. A tabela \ref{table:search_create} apresenta a relação entre média e desvio padrão de criação/terminação para um diferente número de POSIX Threads para os nós do tipo compute-431.
+
+
+\section{Parte I }
+
+
+
+\section{Parte 2 }
 
 
   \begin{table}[H]
@@ -572,6 +587,31 @@
   \end{table}
   
   
+  
+  \section{Parte 3 }
+
+\subsection{Período de amostragem e frequência de amostragem}
+
+Dado que pretendemos encontrar os hotspots de ambas as versões, iremos usar a amostragem baseada em cpu-cycles. Desta forma, porções da aplicação que consumam mais tempo terão um maior número de amostras registadas.
+Analisemos o tempo que demoram as versões large\_naive e large\_interchange sem qualquer tipo de ferramenta de amostragem. Denote que por forma a validar os resultados foram realizadas 50 medições, sendo o valor apresentado o K Best (sendo K = 3):
+
+ \begin{tabular}{ | l | r | r |   }
+
+  \hline
+  \# EVENT NAME	 & LARGE NAIVE  & LARGE INTERCHANGE \\ \hline 
+   Elapsed time & 10.460 &  \\ \hline    
+  \end{tabular}
+
+
+
+
+Cada máquina tem um numero de contadores maximos e fixados a um certo tipo de eventos. Multiplexagem gasta tempo. 
+Peso muito grande na avaliação de desempenho. quais os contadores do nosso interesse e a frequencia de amostragem. 
+
+
+When looking for the hottest spots in an application, you may choose to profile your program using cpu-cycles because the cpu-cycles event is a measure of time just like the cpu-clock software event.
+
+
  \begin{table}[H]
   \caption{Performance events (naive vs. interchange) para o nó compute-431}
   \label{table:search_events}
@@ -581,20 +621,23 @@
   \hline
   \# EVENT NAME	 & NAIVE  & INTERCHANGE \\ \hline 
    Elapsed time & &  \\ \hline    
-  instructions	& 3704300000 &  samples \\ \hline    
-cycles	& 1332700000 &  samples \\ \hline    
-cache-references	& 1200000 &  samples \\ \hline    
-cache-misses	& 200000 &  samples \\ \hline    
-LLC-loads	& 1000000 &  samples \\ \hline    
-LLC-load-misses	& 0 &  samples \\ \hline    
-dTLB-load-misses	& 0 &  samples \\ \hline    
-branches	& 471800000 &  samples \\ \hline    
-branch-misses	& 400000 &  samples \\ \hline    
+  instructions	& 38376000000 &  41776400000 \\ \hline    
+cycles	& 78390700000 &  12384800000 \\ \hline    
+cache-references	& 4744200000 &  14400000 \\ \hline    
+cache-misses	&  4008300000 &  11200000 \\ \hline    
+LLC-loads	& 4815000000  &  14800000 \\ \hline    
+LLC-load-misses	& 4073600000 & 14400000  \\ \hline    
+dTLB-load-misses & 1100000	& 100000  \\ \hline    
+branches	& 3923900000 & 3847500000  \\ \hline    
+branch-misses	&  2200000 &  1900000 \\ \hline    
 
   \end{tabular}
   \end{table}
 
+\subsection{Análise comparativa do número de amostras por evento de hardware para as versões large\_naive e large\_interchange}
 
+Da análise de execução para as versões large\_naive e large\_interchange, 
+ large_naive and large_interchange, and collected event sample data for the most relevant hardware events. A comparative summary is shown in the following table.
 
 
  \begin{table}[H]
@@ -607,16 +650,15 @@ branch-misses	& 400000 &  samples \\ \hline
   \hline
   \# EVENT NAME	 & NAIVE  & INTERCHANGE \\ \hline   
   Elapsed time & &  \\ \hline    
-  instructions	& 37K samples  \\ \hline    
-cycles	&  13K samples  \\ \hline    
-cache-references	& 12 samples &  samples \\ \hline    
-cache-misses	& 2 samples &  samples \\ \hline    
-LLC-loads	& samples &  10 samples \\ \hline    
-LLC-load-misses	& 0 samples &  samples \\ \hline    
-dTLB-load-misses	& 0 samples &  samples \\ \hline    
-branches	& samples &  4K samples \\ \hline    
-branch-misses	& samples & 4 samples \\ \hline    
-
+  instructions & 383K samples	& 417K samples  \\ \hline    
+cycles	& 783K  samples &  123K samples  \\ \hline    
+cache-references &	47K samples & 144 samples   \\ \hline    
+cache-misses & 40K samples	& 112 samples \\ \hline    
+LLC-loads	 &  48K samples &  148 samples \\ \hline    
+LLC-load-misses	& 40K samples & 144 samples  \\ \hline    
+dTLB-load-misses	& 11 samples & 1 samples \\ \hline    
+branches	&  39K samples &  38K samples \\ \hline    
+branch-misses	& 22 samples & 19 samples \\ \hline    
    \end{tabular}
   \end{table}
 

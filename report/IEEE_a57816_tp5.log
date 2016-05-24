@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.16)  24 MAY 2016 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.16)  24 MAY 2016 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -374,62 +374,93 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 44
-2.
+4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.03749> on input line 442.
+(Font)              <10.03749> on input line 444.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.0262> on input line 442.
+(Font)              <7.0262> on input line 444.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.01874> on input line 442.
+(Font)              <5.01874> on input line 444.
 
 
-LaTeX Warning: Reference `table:characterization_laptop' on page 1 undefined on
- input line 442.
+LaTeX Warning: Reference `table:characterization_431' on page 1 undefined on in
+put line 444.
 
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 449.
+
+LaTeX Warning: Reference `table:characterization_651' on page 1 undefined on in
+put line 444.
+
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 450.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 449.
+(Font)              <8.03> on input line 450.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 449.
+(Font)              <5.62097> on input line 450.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 449.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 454.
+(Font)              <4.015> on input line 450.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 455.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <5.62097> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 454.
-LaTeX Font Info:    Calculating math sizes for size <5.62097> on input line 454
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 455.
+LaTeX Font Info:    Calculating math sizes for size <5.62097> on input line 455
 .
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <2.81049> not available
-(Font)              size <5> substituted on input line 454.
+(Font)              size <5> substituted on input line 455.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2.81049> not available
-(Font)              size <5> substituted on input line 454.
+(Font)              size <5> substituted on input line 455.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.81049> not available
-(Font)              size <5> substituted on input line 454.
+(Font)              size <5> substituted on input line 455.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <3.93466> on input line 454.
+(Font)              <3.93466> on input line 455.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <2.81049> on input line 454.
+(Font)              <2.81049> on input line 455.
 
 LaTeX Warning: Reference `table:search_create' on page 1 undefined on input lin
-e 472.
+e 480.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+./IEEE_a57816_tp5.tex:620: Missing $ inserted.
+<inserted text> 
+                $
+l.620  large_
+             naive and large_interchange, and collected event sample data fo...
+
+? 
+./IEEE_a57816_tp5.tex:621: Missing $ inserted.
+<inserted text> 
+                $
+l.621 
+      
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--621
+[]\OT1/ptm/m/n/10.03749 Da an[]alise de execu[][]ao para as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--621
+\OT1/ptm/m/n/10.03749 vers[]oes large[]naive e large[]interchange,
+ []
+
+
+Overfull \hbox (425.16124pt too wide) in paragraph at lines 619--621
+\OT1/ptm/m/n/10.03749 large$[]\OML/cmm/m/it/10 aiveandlarge[]nterchange; andcol
+lectedeventsampledataforthemostrelevanthardwareevents:Acomparativesummaryisshow
+ninthefollowingtable:$ 
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -457,21 +488,23 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  4914 strings out of 493089
- 75031 string characters out of 6134842
- 156810 words of memory out of 5000000
+ 75048 string characters out of 6134842
+ 155810 words of memory out of 5000000
  8338 multiletter control sequences out of 15000+600000
  42364 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 42i,16n,32p,897b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,16n,32p,507b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on IEEE_a57816_tp5.pdf (2 pages, 58781 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on IEEE_a57816_tp5.pdf (2 pages, 79970 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,3 @@
+server:ESC_FLAME_GRAPH filipeoliveira$ cat time_results_large_interchange.csv |
+grep "real" | sed 's/[^0-9.]*//g' | sort > time_interchange.csv
+

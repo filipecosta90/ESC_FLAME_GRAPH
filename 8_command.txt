@@ -1,0 +1,1 @@
+ Percent |	Source code & Disassembly of naive for cpu-clock

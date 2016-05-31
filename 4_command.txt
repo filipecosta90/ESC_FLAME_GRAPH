@@ -1,0 +1,1 @@
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf report --stdio

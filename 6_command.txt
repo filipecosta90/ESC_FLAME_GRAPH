@@ -1,0 +1,1 @@
+[a57816@search6 ESC_FLAME_GRAPH]$ perf report --stdio --sort comm,dso --header

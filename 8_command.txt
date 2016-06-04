@@ -1,1 +1,1 @@
- Percent |	Source code & Disassembly of naive for cpu-clock
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf annotate --stdio --dsos=naive --symbol=multiply_matrices

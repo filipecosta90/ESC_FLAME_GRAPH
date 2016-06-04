@@ -1,0 +1,1 @@
+sum = sum + (matrix_a[i][k] * matrix_b[k][j]) ;

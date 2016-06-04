@@ -1,14 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introdu\347\343o \205 Contextualiza\347\343o da utiliza\347\343o da ferramenta PERF}{}% 1
 \BOOKMARK [1][-]{section.2}{Caracteriza\347\343o do Hardware do ambiente de testes}{}% 2
 \BOOKMARK [1][-]{section.3}{Determina\347\343o do tamanho dos datasets}{}% 3
-\BOOKMARK [1][-]{section.4}{Determina\347\343o do tempo m\351dio necess\341rio para criar e terminar um fio de execu\347\343o}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{N\363s compute-431}{section.4}% 5
-\BOOKMARK [1][-]{section.5}{Parte 1 }{}% 6
-\BOOKMARK [2][-]{subsection.5.1}{Passo 0 \205 uma an\341lise aos software e hardware events dispon\355veis na m\341quina}{section.5}% 7
-\BOOKMARK [2][-]{subsection.5.2}{1\272 Passo \205 o encontrar dos tempos base sem overhead de medi\347\343o}{section.5}% 8
-\BOOKMARK [1][-]{section.6}{O processo de procura de hotpsots de uma aplica\347\343o}{}% 9
-\BOOKMARK [1][-]{section.7}{Parte 2 }{}% 10
-\BOOKMARK [1][-]{section.8}{Parte 3 }{}% 11
-\BOOKMARK [2][-]{subsection.8.1}{Per\355odo de amostragem e frequ\352ncia de amostragem}{section.8}% 12
-\BOOKMARK [2][-]{subsection.8.2}{An\341lise comparativa do n\372mero de amostras por evento de hardware para as vers\365es large\137naive e large\137interchange}{section.8}% 13
-\BOOKMARK [1][-]{section.9}{Conclus\343o}{}% 14
+\BOOKMARK [1][-]{section.4}{Parte 1 }{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Passo 0 \205 uma an\341lise aos software e hardware events dispon\355veis na m\341quina}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{1\272 Passo \205 o encontrar dos tempos base sem overhead de medi\347\343o para o menor dataset \(dataset em LLCACHE\)}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{O processo de procura de hotpsots de uma aplica\347\343o}{section.4}% 7
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Passo 1}{subsection.4.3}% 8
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Passo 2}{subsection.4.3}% 9
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Aumentar a granularidade do profilling \205 fase I}{subsection.4.3}% 10
+\BOOKMARK [3][-]{subsubsection.4.3.4}{Aumentar a granularidade do profilling \205 fase II}{subsection.4.3}% 11
+\BOOKMARK [2][-]{subsection.4.4}{M\351todo de profiling}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Parte 2 }{}% 13
+\BOOKMARK [1][-]{section.6}{Parte 3 }{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Per\355odo de amostragem e frequ\352ncia de amostragem}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{An\341lise comparativa do n\372mero de amostras por evento de hardware para as vers\365es large\137naive e large\137interchange}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Conclus\343o}{}% 17

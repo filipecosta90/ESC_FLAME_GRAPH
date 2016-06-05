@@ -1,0 +1,3 @@
+perf record -ag -F 99 ./large_naive
+perf script | /share/jade/SOFT/FlameGraph/stackcollapse-perf.pl > out.perf-folded
+cat out.perf-folded | /share/jade/SOFT/FlameGraph/flamegraph.pl > perf_kernel_large_naive.svg

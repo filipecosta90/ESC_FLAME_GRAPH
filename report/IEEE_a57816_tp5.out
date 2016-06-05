@@ -13,5 +13,12 @@
 \BOOKMARK [1][-]{section.5}{Parte 2 }{}% 13
 \BOOKMARK [1][-]{section.6}{Parte 3 }{}% 14
 \BOOKMARK [2][-]{subsection.6.1}{Per\355odo de amostragem e frequ\352ncia de amostragem}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.2}{An\341lise comparativa do n\372mero de amostras por evento de hardware para as vers\365es large\137naive e large\137interchange}{section.6}% 16
-\BOOKMARK [1][-]{section.7}{Conclus\343o}{}% 17
+\BOOKMARK [2][-]{subsection.6.2}{An\341lise comparativa dos evento de hardware para as vers\365es large\137naive e large\137interchange, para o maior dataset em teste}{section.6}% 16
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Confirma\347\343o de metodologia de medi\347\343o via metadados}{subsection.6.2}% 17
+\BOOKMARK [2][-]{subsection.6.3}{An\341lise comparativa do n\372mero de amostras por evento de hardware para as vers\365es large\137naive e large\137interchange}{section.6}% 18
+\BOOKMARK [1][-]{section.7}{An\341lise gr\341fica com recurso a Flame Graphs}{}% 19
+\BOOKMARK [2][-]{figure.caption.8}{Flame Graph kernel naive}{section.7}% 20
+\BOOKMARK [3][-]{figure.caption.9}{Flame Graph kernel large\137naive}{figure.caption.8}% 21
+\BOOKMARK [3][-]{figure.caption.10}{Flame Graph kernel interchange}{figure.caption.8}% 22
+\BOOKMARK [3][-]{figure.caption.11}{Flame Graph kernel large\137interchange}{figure.caption.8}% 23
+\BOOKMARK [1][-]{section.8}{Conclus\343o}{}% 24

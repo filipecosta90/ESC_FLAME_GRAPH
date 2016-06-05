@@ -1,0 +1,2 @@
+cpu-cycles: sample_freq=100000
+instructions: sample_freq=100000

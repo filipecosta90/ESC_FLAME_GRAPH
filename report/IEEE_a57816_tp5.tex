@@ -2,57 +2,6 @@
 % !TEX encoding = UTF-8 Unicode
 
 
-%% bare_conf_compsoc.tex
-%% V1.4b
-%% 2015/08/26
-%% by Michael Shell
-%% See:
-%% http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.8b or later) with an IEEE Computer
-%% Society conference paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/pkg/ieeetran
-%% and
-%% http://www.ieee.org/
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE! 
-%% User assumes all risk.
-%% In no event shall the IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-  %% consequential, or any other damages, resulting from the use or misuse
-  %% of any information contained here.
-  %%
-  %% All comments are the opinions of their respective authors and are not
-  %% necessarily endorsed by the IEEE.
-  %%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-  %% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-  %% distributed and modified. A copy of the LPPL, version 1.3, is included
-  %% in the base LaTeX documentation of all distributions of LaTeX released
-  %% 2003/12/01 or later.
-  %% Retain all contribution notices and credits.
-  %% ** Modified files should be clearly indicated as such, including  **
-  %% ** renaming them and changing author support contact information. **
-  %%*************************************************************************
-
-
-  % *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-  % *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-  % *** with production work. The IEEE's font choices and paper sizes can   ***
-  % *** trigger bugs that do not appear when using other class files.       ***                          ***
-  % The testflow support page is at:
-  % http://www.michaelshell.org/tex/testflow/
-
-
 
   \documentclass[conference,compsoc]{IEEEtran}
   % Some/most Computer Society conferences require the compsoc mode option,
@@ -69,30 +18,28 @@
   \usepackage{multicol}% http://ctan.org/pkg/multicols
 
 
-  % Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
 
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsExtensions{.eps}
+\usepackage{url}
+\usepackage{multicol}% http://ctan.org/pkg/multicols
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{.85\textwidth}
 
-  % *** MISC UTILITY PACKAGES ***
-  %
-  %\usepackage{ifpdf}
-  % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-  % compilation based on whether the output is pdf or dvi.
-  % usage:
-  % \ifpdf
-  %   % pdf code
-  % \else
-  %   % dvi code
-  % \fi
-  % The latest version of ifpdf.sty can be obtained from:
-  % http://www.ctan.org/pkg/ifpdf
-  % Also, note that IEEEtran.cls V1.7 and later provides a builtin
-  % \ifCLASSINFOpdf conditional that works the same way.
-  % When switching from latex to pdflatex and vice-versa, the compiler may
-  % have to be run twice to clear warning/error messages.
+\usepackage[utf8x]{inputenc} 
 
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{listings,mdframed}
 
-
+\usepackage{textcomp}
+\usepackage{hyperref}
 
 
 
@@ -106,32 +53,7 @@
   % normal IEEE
   \usepackage{cite}
   \fi
-  % cite.sty was written by Donald Arseneau
-  % V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-  % \cite{} output to follow that of the IEEE. Loading the cite package will
-  % result in citation numbers being automatically sorted and properly
-  % "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-  % cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-  % \cite will automatically add leading space, if needed. Use cite.sty's
-  % noadjust option (cite.sty V3.8 and later) if you want to turn this off
-  % such as if a citation ever needs to be enclosed in parenthesis.
-  % cite.sty is already installed on most LaTeX systems. Be sure and use
-  % version 5.0 (2009-03-20) and later if using hyperref.sty.
-  % The latest version can be obtained at:
-  % http://www.ctan.org/pkg/cite
-  % The documentation is contained in the cite.sty file itself.
-  %
-  % Note that some packages require special options to format as the Computer
-  % Society requires. In particular, Computer Society  papers do not use
-  % compressed citation ranges as is done in typical IEEE papers
-  % (e.g., [1]-[4]). Instead, they list every citation separately in order
-  % (e.g., [1], [2], [3], [4]). To get the latter we need to load the cite
-  % package with the nocompress option which is supported by cite.sty v4.0
-  % and later.
-
-
-
-
+  
 
   % *** GRAPHICS RELATED PACKAGES ***
   %
@@ -153,181 +75,7 @@
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
   \fi
-  % graphicx was written by David Carlisle and Sebastian Rahtz. It is
-  % required if you want graphics, photos, etc. graphicx.sty is already
-  % installed on most LaTeX systems. The latest version and documentation
-  % can be obtained at: 
-  % http://www.ctan.org/pkg/graphicx
-  % Another good source of documentation is "Using Imported Graphics in
-  % LaTeX2e" by Keith Reckdahl which can be found at:
-  % http://www.ctan.org/pkg/epslatex
-  %
-  % latex, and pdflatex in dvi mode, support graphics in encapsulated
-  % postscript (.eps) format. pdflatex in pdf mode supports graphics
-  % in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-  % that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-  % not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-  % which can result in "jaggedy"/blurry rendering of lines and letters as
-  % well as large increases in file sizes.
-  %
-  % You can find documentation about the pdfTeX application at:
-  % http://www.tug.org/applications/pdftex
-
-
-
-
-
-  % *** MATH PACKAGES ***
-  %
-  %\usepackage{amsmath}
-  % A popular package from the American Mathematical Society that provides
-  % many useful and powerful commands for dealing with mathematics.
-  %
-  % Note that the amsmath package sets \interdisplaylinepenalty to 10000
-  % thus preventing page breaks from occurring within multiline equations. Use:
-  %\interdisplaylinepenalty=2500
-  % after loading amsmath to restore such page breaks as IEEEtran.cls normally
-  % does. amsmath.sty is already installed on most LaTeX systems. The latest
-  % version and documentation can be obtained at:
-  % http://www.ctan.org/pkg/amsmath
-
-
-
-
-
-  % *** SPECIALIZED LIST PACKAGES ***
-  %
-  %\usepackage{algorithmic}
-  % algorithmic.sty was written by Peter Williams and Rogerio Brito.
-  % This package provides an algorithmic environment fo describing algorithms.
-  % You can use the algorithmic environment in-text or within a figure
-  % environment to provide for a floating algorithm. Do NOT use the algorithm
-  % floating environment provided by algorithm.sty (by the same authors) or
-  % algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
-  % algorithm float types and packages that provide these will not provide
-  % correct IEEE style captions. The latest version and documentation of
-  % algorithmic.sty can be obtained at:
-  % http://www.ctan.org/pkg/algorithms
-% Also of interest may be the (relatively newer and more customizable)
-  % algorithmicx.sty package by Szasz Janos:
-  % http://www.ctan.org/pkg/algorithmicx
-
-
-
-
-  % *** ALIGNMENT PACKAGES ***
-  %
-  %\usepackage{array}
-  % Frank Mittelbach's and David Carlisle's array.sty patches and improves
-  % the standard LaTeX2e array and tabular environments to provide better
-  % appearance and additional user controls. As the default LaTeX2e table
-  % generation code is lacking to the point of almost being broken with
-  % respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-  % set of table tools. array.sty is already installed on most systems. The
-  % latest version and documentation can be obtained at:
-  % http://www.ctan.org/pkg/array
-
-
-  % IEEEtran contains the IEEEeqnarray family of commands that can be used to
-  % generate multiline equations as well as matrices, tables, etc., of high
-  % quality.
-
-
-
-
-  % *** SUBFIGURE PACKAGES ***
-  %\ifCLASSOPTIONcompsoc
-  %  \usepackage[caption=false,font=footnotesize,labelfont=sf,textfont=sf]{subfig}
-  %\else
-  %  \usepackage[caption=false,font=footnotesize]{subfig}
-  %\fi
-  % subfig.sty, written by Steven Douglas Cochran, is the modern replacement
-  % for subfigure.sty, the latter of which is no longer maintained and is
-  % incompatible with some LaTeX packages including fixltx2e. However,
-  % subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
-  % which will override IEEEtran.cls' handling of captions and this will result
-  % in non-IEEE style figure/table captions. To prevent this problem, be sure
-  % and invoke subfig.sty's "caption=false" package option (available since
-      % subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
-  % handling of captions.
-  % Note that the Computer Society format requires a sans serif font rather
-  % than the serif font used in traditional IEEE formatting and thus the need
-  % to invoke different subfig.sty package options depending on whether
-  % compsoc mode has been enabled.
-  %
-  % The latest version and documentation of subfig.sty can be obtained at:
-  % http://www.ctan.org/pkg/subfig
-
-
-
-
-  % *** FLOAT PACKAGES ***
-  %
-  %\usepackage{fixltx2e}
-  % fixltx2e, the successor to the earlier fix2col.sty, was written by
-  % Frank Mittelbach and David Carlisle. This package corrects a few problems
-  % in the LaTeX2e kernel, the most notable of which is that in current
-  % LaTeX2e releases, the ordering of single and double column floats is not
-  % guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-  % single column figure to be placed prior to an earlier double column
-  % figure.
-  % Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
-  % corrections already built into the system in which case a warning will
-  % be issued if an attempt is made to load fixltx2e.sty as it is no longer
-  % needed.
-  % The latest version and documentation can be found at:
-  % http://www.ctan.org/pkg/fixltx2e
-
-
-  %\usepackage{stfloats}
-  % stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-  % the ability to do double column floats at the bottom of the page as well
-  % as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-      % LaTeX2e). It also provides a command:
-  %\fnbelowfloat
-  % to enable the placement of footnotes below bottom floats (the standard
-      % LaTeX2e kernel puts them above bottom floats). This is an invasive package
-  % which rewrites many portions of the LaTeX2e float routines. It may not work
-  % with other packages that modify the LaTeX2e float routines. The latest
-  % version and documentation can be obtained at:
-  % http://www.ctan.org/pkg/stfloats
-  % Do not use the stfloats baselinefloat ability as the IEEE does not allow
-  % \baselineskip to stretch. Authors submitting work to the IEEE should note
-  % that the IEEE rarely uses double column equations and that authors should try
-  % to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-  % packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
-  % such ways.
-  % Do not attempt to use stfloats with fixltx2e as they are incompatible.
-  % Instead, use Morten Hogholm'a dblfloatfix which combines the features
-  % of both fixltx2e and stfloats:
-  %
-  % \usepackage{dblfloatfix}
-  % The latest version can be found at:
-  % http://www.ctan.org/pkg/dblfloatfix
-
-
-
-
-  % *** PDF, URL AND HYPERLINK PACKAGES ***
-  %
-  %\usepackage{url}
-  % url.sty was written by Donald Arseneau. It provides better support for
-  % handling and breaking URLs. url.sty is already installed on most LaTeX
-  % systems. The latest version and documentation can be obtained at:
-  % http://www.ctan.org/pkg/url
-  % Basically, \url{my_url_here}.
-
-
-
-
-  % *** Do not adjust lengths that control margins, column widths, etc. ***
-  % *** Do not use packages that alter fonts (such as pslatex).         ***
-  % There should be no need to do such things with IEEEtran.cls V1.6 and later.
-  % (Unless specifically asked to do so by the journal or conference you plan
-      % to submit to, of course. )
-
-
+  
   % correct bad hyphenation here
   \hyphenation{op-tical net-works semi-conduc-tor}
 
@@ -338,8 +86,79 @@
   \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
   \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-  \usepackage{float}
-  \usepackage{listings}
+
+\usepackage{float}
+\usepackage{listings}
+
+\lstdefinestyle{esc} {
+language=c,
+	keywordstyle=\bfseries\ttfamily\color[rgb]{0,0,1},
+	identifierstyle=\ttfamily,
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941},
+	showstringspaces=false,
+	basicstyle=\tiny,
+numberstyle=\small,
+numbers=right,
+	stepnumber=1,
+	numbersep=10pt,
+	tabsize=1,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	breakatwhitespace=false,
+	%aboveskip={1.5\baselineskip},
+  columns=fixed,
+  upquote=true,
+  extendedchars=true,
+ frame=single,
+}
+
+\lstdefinestyle{command}{
+backgroundcolor=\color{yellow},frame=shadowbox,
+language=c,
+	keywordstyle=\bfseries\ttfamily\color[rgb]{0,0,1},
+	identifierstyle=\ttfamily,
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941},
+	showstringspaces=false,
+	basicstyle=\scriptsize,
+numberstyle=\small,
+numbers=right,
+	stepnumber=1,
+	numbersep=10pt,
+	tabsize=1,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	breakatwhitespace=false,
+	%aboveskip={1.5\baselineskip},
+  columns=fixed,
+  upquote=true,
+  extendedchars=true,
+}
+
+\lstset{
+	language=c,
+	keywordstyle=\bfseries\ttfamily\color[rgb]{0,0,1},
+	identifierstyle=\ttfamily,
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941},
+	showstringspaces=false,
+	basicstyle=\scriptsize,
+numberstyle=\small,
+numbers=right,
+	stepnumber=1,
+	numbersep=10pt,
+	tabsize=1,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	breakatwhitespace=false,
+	%aboveskip={1.5\baselineskip},
+  columns=fixed,
+  upquote=true,
+  extendedchars=true,
+ frame=single
+ %backgroundcolor=\color{lbcolor},
+}
 
 
   \begin{document}
@@ -350,7 +169,7 @@
   % not capitalized unless they are the first or last word of the title.
   % Linebreaks \\ can be used within to get better formatting as desired.
   % Do not put math or special symbols in the title.
-  \title{Introdução ao PERF}
+  \title{Introdução ao PERF\\ Determinação de Hotspots de execução de kernels recorrendo a PERF (linux-tools)}
 
   % author names and affiliations
   % use a multiple column layout for up to three different
@@ -434,18 +253,29 @@
 
   %\hfill 1 Março, 2016
 
-  \section{Introdução -- Contextualização do PERF}
+  \section{Introdução -- Contextualização da utilização da ferramenta PERF}  
+  
+O presente trabalho prático surge como um "diário de bordo" relativo ao acompanhamento de um conjunto de 3 parte do tutorual: \textbf{"PERF tutorial: Finding execution hot spots"}.\footnote{\url{http://sandsoftwaresound.net/perf/perf-tutorial-hot-spots/}}
+\par 
+A parte 1 descreve a utilização da ferramenta PERF como meio de identificação e análise de hotspots de execução em kernels. Cobre maioritariamente os comandos PERF mais básico, e respectivas opções e eventos de medição de performance relativa.\par 
+A parte 2 introduz eventos que permitem a medição de contadores de hardware e demonstra a utilização do PERF nesse sentido. Discute ainda a importância de certas métricas de performance e a sua influência relativa na performance geral de uma aplicação.\par 
+A parte 3 recorre aos eventos de contadores de hardware para, uma vez mais e desta vez de uma forma mais aprofundada, analisar os hotspots de um kernel/aplicação.\par 
+Todo o tutorial assenta em duas versões de uma aplicação de multiplicação de matrizes:
+begin{itemize}
+\item \textbf{Naive:} Algoritmo de multiplicação de matrizes com acessos a memória "column-wise". 
+\item \textbf{Interchange:}  Algoritmo de multiplicação de matrizes com acessos a memória "row-wise". 
+\end{itemize}
+A primeira versão serão, com seria de esperar, apresentará problemas de performance relacionados com o acesso à memória. É importante também realçar que as aplicações são ambas compiladas com a versão de compilador GCC 4.9.0., com as seguintes flags de compilação "-O2 -ggdb -g". Denote que a flag de otimização -O3, que activa um conjunto de otimizações de código\footnote{-finline-functions, -funswitch-loops, -fpredictive-commoning, -fgcse-after-reload, -ftree-vectorize, -fvect-cost-model, -ftree-partial-pre and -fipa-cp-clone options} está desativada, muito pela necessidade de manter o código (apesar de pouco eficiente) legível e com capacidade de ser compreendido pelo programador.\par 
 
-  \section{Contextualização das métricas de performance em estudo}
 
   \section{Caracterização do Hardware do ambiente de testes}
   
-  Especificadas as métricas de performance em estudo, resta-nos especificar os ambientes de teste nos quais pretendemos realizar as benchmarks. \par 
-  Através da análise do hardware disponível no Search6 \footnote{Services and Advanced Research Computing with HTC/HPC clusters}, uma das nossas plataformas de teste, foram seleccionados nós do tipo compute-431, e compute 651,sendo a disponibilidade global dos mesmos o principal factor. Nas tabelas \ref{table:characterization_431} e \ref{table:characterization_651} encontram-se especificadas as principais características dos sistemas em teste.\par 
+  Tão importante com especificar as versões de código e as propriedades é especificar os ambientes de teste nos quais pretendemos realizar as benchmarks. \par 
+  Através da análise do hardware disponível no Search6 \footnote{Services and Advanced Research Computing with HTC/HPC clusters}, uma das nossas plataformas de teste, foi seleccionado o nó do tipo compute-431, sendo a disponibilidade global do mesmo e o correcto funcionamento do perf os principais factores. Na tabela \ref{table:characterization_431} encontram-se especificadas as principais características dos sistemas em teste.\par 
 
   \begin{table}[H]
   \caption{Características de Hardware do nó 431}
-  \label{table:characterization_search}
+  \label{table:characterization_431}
   \centering
   \begin{tabular}{ | l | r | }
 
@@ -468,23 +298,168 @@
   \end{tabular}
   \end{table}
 
-
   \section{Determinação do tamanho dos datasets}
 
-sqrt( (12288KB / 4 bytes ) / 3 ) = 1011 
+Talvez dos pontos mais importantes presente na tabela de caracterização de hardware seja o tamanho da Cache L3, dado que ambos os algoritmos dependem massivamente de leitura/escrita na memória principal. Assim sendo, se pretendemos realçar as penalizações resultantes de diferentes tipos de acesso aos dados devemos realizar dois tipos distintos de testes:
+\begin{itemize}
+\item Matrizes contidas na LLC: \par Sabemos que as 3 matrizes terão de ter uma tamanho de coluna/linha inferior a: \[lado\ matriz \leq \frac{\sqrt{(\frac{12288KB}{4\ Bytes\ p/ float}}}{3\ matrizes} \leq 1011\] para que os datasets estejam completamente contidos em cache. Foi escolhido o lado da matriz de 512 elementos.
+\item Matrizes contidas na memória principal: \par 
+Sabemos que as 3 matrizes terão de ter uma tamanho de coluna/linha superior a 1011 elemento por linha/coluna. Foi escolhido o lado da matriz de 2048 elementos.\par
+Dorante, todos os comandos apresentados terão por standard o dataset menor (matrizes de 512*512), e o kernel naive. Em caso de serem utilizados outro kernel ou dataset será feita a referência antes da apresentação dos resultados.
+\section{Parte 1 }
+
+\subsection{Passo 0 -- uma análise aos software e hardware events disponíveis na máquina}
+Recorrendo ao seguinte commando:
+ \begin{lstlisting}[style=command]
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf list | wc -l   
+\end{lstlisting}
+Podemos ter uma noção em ternos de eventos de hardware e software disponíveis na máquina de teste:
+\begin{lstlisting}
+784
+\end{lstlisting}
+   
+\subsection{1º Passo -- o encontrar dos tempos base sem overhead de medição para o menor dataset (dataset em LLCACHE)}
+
+Por forma 	a podermos estabelecer um limite dentro do aceitável das possíveis alterações à performance das versões do kernel necessitamos de primeiramente ter uma medição com o mínimo de overhead possível, para o menor dataset em profiling (matriz 512*512), para o caso \textbf{naive}. Recorrendo ao seguinte comando:
+
+ \begin{lstlisting}[style=command]
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf stat -e cpu-clock ./naive
+   \end{lstlisting}
+\begin{lstlisting}
+ Performance counter stats for './naive':
+
+        201.696023      cpu-clock (msec)                                            
+
+       0.206153405 seconds time elapsed
+\end{lstlisting}
+Teremos uma base de referência futura, para podermos validar as nossas medições com overhead.\par 
+Para além do tempo de execução é ainda demonstrado o número de cpu-clocks necessários para a execução.\par  
+
+Como seria de esperar, é possível num única medição registar vários eventos. Recorrendo ao seguinte comando:
+
+ \begin{lstlisting}[style=command]
+[a57816@compute-431-1 ESC_FLAME_GRAPH]$ perf stat -e cpu-clock,faults ./naive
+   \end{lstlisting}
+\lstinputlisting[language=C]{../2_naive_cpu_clock_faults.txt} %input de um ficheiro
+
+\subsection{O processo de procura de hotpsots de uma aplicação}       
+
+O processo de procura de hotpsots de uma aplicação pode ser traduzido em 2 passos simples:
+\begin{itemize}
+\item Passo 1: Recolha de dados para profiling da aplicação
+\item Passo 2 : Tratamento e apresentação da informação recolhida.
+\end{itemize}
+    
+\subsubsection{Passo 1}
+Podemos recolher informação de profiling simplesmente correndo o seguinte comando:
+\label{passo1}
+\lstinputlisting[style=command]{../3_command.txt} %input de um ficheiro
+
+Neste caso específico o PERF corre a aplicação naive e recolhe dados relativos aos eventos: cpu-clock e page-faults. 
+\lstinputlisting[language=C]{../3_step_1.txt} %input de um ficheiro
+
+
+\subsubsection{Passo 2}
+\par 
+Relativamente ao passo 2 - Tratamento e apresentação da informação recolhida - o seguinte comando permite visualizar a informação presente no ficheiro prof.data (ficheiro default no qual é gravada a informação): \par 
+
+\lstinputlisting[style=command]{../4_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../4_perf_report_stdio.txt} %input de um ficheiro
+
+
+Existem outras alternativas a esse mesmo comando sendo esta:
+
+\lstinputlisting[style=command]{../4_command_1.txt} %input de um ficheiro
+
+que apresenta o Terminal-based User Interface (TUI).\par 
+ Voltemos ao output apresentado pelo comando com a opção \-\-stdio. Denote no seguinte detalhe:
+ 
+ \lstinputlisting[language=C]{../4_perf_detail.txt} %input de um ficheiro
+
+ Como poderá confirmar foram registadas 808 medições do evento "cpu-clock".\par
+ Adicionando a opção - -sort  conseguimos uma visualização agregada. Em conjunção com a opção \textbf{comm} e \textbf{dso} obtemos o seguinte resultado.
+ 
+\lstinputlisting[style=command]{../5_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../5_report_stdio_sort.txt} %input de um ficheiro
+
+Como pode confirmar pelo output, as duas opções no comando permitem agregar os resultados por comando e shared object.\par 
+
+Por forma a simplificar o processo de catalogação e posterior tratamento de dados é possível aceder a metadados das medições, através da junção da opção \textbf{--header} ao comando anterior.
+Desta forma temos acesso a por exemplo, os dados de hardware do ambiente de teste, o comando perf utilizado e informação relativa aos eventos medidos. Esta funcionalidade torna-se bastante útil dada a tremenda facilidade que temos hoje em dia de gerar dados de teste. A consequência da facilidade de tal geração é a posterior necessidade de tratamento correcto dos mesmos.\par 
 
 
 
-  \section{Determinação do tempo médio necessário para criar e  terminar um fio de execução}
-  \subsection{Nós compute-431}
-  Por forma a calcular o tempo médio necessário para criar e terminar um fio de execução foi criado um kernel, que apenas realizava essas mesmas operações e registados os valores para os diferentes número de threads. A tabela \ref{table:search_create} apresenta a relação entre média e desvio padrão de criação/terminação para um diferente número de POSIX Threads para os nós do tipo compute-431.
+
+\lstinputlisting[style=command]{../6_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../6_report_stdio_sort_header.txt} %input de um ficheiro
 
 
-\section{Parte I }
+\subsubsection{Aumentar a granularidade do profilling -- fase I}
 
+O exemplo dado anteriormente apresenta os dados agregados relativos a toda a aplicação. Ora, daí podemos observar que   \textbf{97.03\%} do tempo de execução é despendido em métodos da própria aplicação, enquanto que os restantes \textbf{2.48\%} são despendidos na biblioteca do sistema \textbf{libc-2.12.so}.\par 
+O próximo passo será portanto aumentar a granularidade do profilling nestes dois "shared objects".
 
+\lstinputlisting[style=command]{../7_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../7_report_stdio_dsos.txt} %input de um ficheiro
+
+O método \textbf{multiply\_matrices()} é o responsável pela maioria do tempo de computação, sendo aproximadamente 94.86\%. \par A segunda função, em termos de tempo de computação é a \textbf{initialize\_matrices} com 2.10\%. \par 
+Podemos ainda analisar as \textbf{page faults} da aplicação, sendo que a maioria ocorre no método \textbf{initialize\_matrices} -- 63.61\%, como seria de esperar. Este comportamento é o esperado, e não é responsável por qualquer problema de performance da aplicação, dado que esse mesmo método apenas ocupa 2.10\% do tempo total da aplicação, não afectando o processo de multiplicação de matrizes, que é o responsável pela maior porção do mesmo.\par 
+Podemos ainda "validar" o número de page faults ocorrido, associando-o ao tamanho da matriz em uso. Ora, 512*512 floats representa um total de $512*512*(4\ bytes) = 1024KB $, multiplicado por 3 (3 matrizes), representa um total de 3072 KB, que representa um total de páginas $\frac{3072KB}{4KB\ por\ página} = 768$. Ora, 63.61\% do total de \textbf{page fauts} contabilizadas representa $0.6361 * 1157 = 735,9677 = 736\ páginas$, como espectado.
+
+\subsubsection{Aumentar a granularidade do profilling -- fase II}
+Agora que temos a completa percepção de qual o método que está a consumir maioritariamente o tempo de execução, podemos realizar um análise não por biblioteca, mas por método, associando então ao método \textbf{multiply\_matrices()} o respectivo código máquina e posição relativa ao início do método, recorrendo ao comando:
+
+\lstinputlisting[style=command]{../8_command.txt} %input de um ficheiro
+
+Produzindo o seguinte output: 
+\lstinputlisting[language=C]{../8_annotate.txt} %input de um ficheiro
+
+Caso pretendamos retirar o código na linguagem de alto nível, mantendo apenas a associação a código máquina com percentagem de tempo de execução, podemos recorrer ao seguinte comando:
+\lstinputlisting[style=command]{../9_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../9_annotate_no_source.txt} %input de um ficheiro
+
+Pela análise da execução dos dois comandos anteriores, temos então a resposta há muito aguardada. O nosso primeiro trabalho de detective dá-se por terminado com descoberta da  "principal responsável":
+
+\lstinputlisting[style=command]{../9_line.txt} %input de um ficheiro
+
+\subsection{Método de profiling}
+
+Recolhidos os dados e descoberto o "culpado" resta-nos saber se o "modus operandi" da recursão ao comando PERF foi o mais indicado.\par
+O PERF recorre a sampling estatístico para recolher os dados de profiling. Cada amostra é recolhida com base num tempo constante, tendo por base o \textbf{Linux time clock} para medir também a passagem do mesmo. Quando termina o intervalo de tempo constante é gerada uma interrupção e o PERF determina o trabalho que estava a ser realizado pelo CPU no momento da interrupção, registando por exemplo metadados do CPU, program counter, e software, produzindo aquilo que é chamado de um \textbf{sample}, sendo este escrito num buffer, posteriormente escrito no ficheiro \textbf{perf.data}. \par 
+
+Dado que nos iremos basear no sampling estatístico para inferir conclusões acerca do comportamento de um kernel necessitamos de ser cautelosos quanto ao número de samples a recolher. \textbf{Se por um lado o excesso de amostras levará a uma interferência nos dados a serem medidos, a falta delas levará à incerteza.} Poderemos estar a concluir erradamente que uma porção de código é a responsável pela degradação de performance devido à falta de amostras que nos apontem noutro sentido. \par 
+
+Uma forma de aumentar o número de amostras é especificando a frequência sobre a qual as mesmas serão recolhidas, através do seguinte comando: 
+
+\lstinputlisting[style=command]{../10_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../10_freq8000.txt} %input de um ficheiro
+
+A execução do comando anterior resultou na recolha do dobro de amostras ( 1636 amostras vs as anteriores 830) em comparação com a medição efectuada em \ref{passo1}, devido também ao aumento em dobro da frequência -- 8000 vs 4000, tal como pode ser confirmado pela execução do comando seguinte: 
+
+\lstinputlisting[style=command]{../11_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../11_nr_samples.txt} %input de um ficheiro
+
+Confirmamos portanto que se mantém o ponto crítico da nossa aplicação. 94.74\% do tempo da mesma foi despendido no método \textbf{multiply\_matrices}, tal como pretendíamos confirmar. 
 
 \section{Parte 2 }
+
+Encontrado o ponto alvo na "investigação" anterior, resta-nos resolver o problema. Atente nas seguintes transcrições de código, pertencentes nomeadamente à versão naive e interchange:
+\begin{itemize}
+\item{ Naive: \par \lstinputlisting[language=C]{../11_5_naive_detail.c} %input de um ficheiro
+Ilustração do acesso às posições da matriz via ordem IJK:\par 
+      \includegraphics[width=0.75\columnwidth]{PNG/matrix_ijk_final.png}
+      
+
+\item {Interchage: \par  \lstinputlisting[language=C]{../11_5_interchage_detail.c} %input de um ficheiro
+Ilustração do acesso às posições da matriz via ordem IKJ:\par 
+      \includegraphics[width=0.75\columnwidth]{PNG/matrix_ikj_final.png}
+\end{itemize}
+
+
+A ordem dos ciclos I-J-K na versão naive resulta na constante invalidação das linhas de cache que correspondam a dados da matriz B. Ora, este problema irá acentuar-se em caso de necessidade de acesso à memórial principal, aumento a latência da recolha dos mesmos e provocando um atraso ainda mais visível quando comparada com a versão I-K-J.\par 
+
+
+A seguinte tabela resume vários contadores de performance para as duas versões do kernel -- naive e interchange, para o dataset menor em estudo:
 
 
   \begin{table}[H]
@@ -518,11 +493,22 @@ sqrt( (12288KB / 4 bytes ) / 3 ) = 1011
   \end{tabular}
   \end{table}
   
-  
-  
+
+Da análise da tabela   \ref{table:search_events} podemos confirmar que:
+
+\begin{itemize}
+\item O número de CPU cycles é menor para a versão interchange, reflectindo-se num menor tempo de solução.
+\item O número de instruções é aproximadamente o mesmo dado para este dataset a invalidação dos dados não ser reflectida em leitura da memória principal mas apenas da LLCACHE (mais à frente neste relatório iremos analisar a influência da leitura da memória principal no tempo de execução).
+\item O número de "cache-references" é muito maior para o caso naive (tal com esperado pela invalidação dos dados de matrizes).
+\item O número de LLC loads é também muito maior para o caso naive (pela razão enumerada anteriormente).
+\end{itemize}
+Podemos então concluir que é este problema de padrão de acesso aos dados que resulta na degradação de performance da versão naive quando comparada com a versão interchange.\par 
+Analisemos agora as métricas compostas, obtidas com base nos valores apresentados:
+
+
   \begin{table}[H]
-  \caption{Performance events (naive vs. interchange) para o nó compute-431}
-  \label{table:search_events}
+  \caption{Performance rates (naive vs. interchange) para o nó compute-431}
+  \label{table:search_rates}
   \centering
   \begin{tabular}{ | l | r | r |   }
 
@@ -586,35 +572,45 @@ sqrt( (12288KB / 4 bytes ) / 3 ) = 1011
      \end{tabular}
   \end{table}
   
-  
+A degradação de performance das versões, para o caso do dataset menor, não é traduzida numa exponenciação dos tempos totais para a solução, muito devido aos dados  apesar de estarem a ser acedidos de forma ineficiente, manterem-se contidos na LLCACHE. Focaremos a nossa análise doravante no dataset maior.\par 
+
+
+
+
+    
   
   \section{Parte 3 }
 
 \subsection{Período de amostragem e frequência de amostragem}
 
-Dado que pretendemos encontrar os hotspots de ambas as versões, iremos usar a amostragem baseada em cpu-cycles. Desta forma, porções da aplicação que consumam mais tempo terão um maior número de amostras registadas.
-Analisemos o tempo que demoram as versões large\_naive e large\_interchange sem qualquer tipo de ferramenta de amostragem. Denote que por forma a validar os resultados foram realizadas 50 medições, sendo o valor apresentado o K Best (sendo K = 3):
+Dado que pretendemos encontrar os hotspots de ambas as versões, iremos usar a amostragem baseada em cpu-cycles. Desta forma, porções da aplicação que consumam mais tempo terão um maior número de amostras registadas. No entanto, este tipo de amostragem tem um preço -- pode ser demasiado pesada na avaliação de desempenho da aplicação. \par 
 
+Temos que ter em conta que cada máquina tem um número de contadores máximos e fixados a certo tipo de eventos específicos. Ora, quando requeremos um grande número de eventos no profiling, é necessária a recorrência a multiplexagem, que gasta tempo de computação. Essa mesma multiplexagem poderá ter um peso demasiado elevado na avaliação de desempenho.\par 
+
+
+Analisemos o tempo que demoram as versões large\_naive e large\_interchange sem qualquer tipo de ferramenta de amostragem por forma a podermos validar os resultados da avaliação de desempenho futura. Denote que por forma a validar os resultados foram realizadas 50 medições, sendo o valor apresentado o K Best (sendo K = 3) :
+
+  \begin{table}[H]
+  \label{table:base_rates}
+  \centering
  \begin{tabular}{ | l | r | r |   }
 
   \hline
-  \# EVENT NAME	 & LARGE NAIVE  & LARGE INTERCHANGE \\ \hline 
-   Elapsed time & 10.460 &  \\ \hline    
+  EVENT NAME	 & L. NAIVE  & L. INTERCHANGE \\ \hline 
+   Elapsed time & & \\ (seconds) & 10.43 & 65.61  \\ \hline    
   \end{tabular}
+  \end{table}
+
+Temos portanto agora uma base de referência também para estas versões que recorrem ao maior dataset em estudo. Voltemos portanto ao profilling das versões com os maiores datasets.\par 
 
 
 
 
-Cada máquina tem um numero de contadores maximos e fixados a um certo tipo de eventos. Multiplexagem gasta tempo. 
-Peso muito grande na avaliação de desempenho. quais os contadores do nosso interesse e a frequencia de amostragem. 
-
-
-When looking for the hottest spots in an application, you may choose to profile your program using cpu-cycles because the cpu-cycles event is a measure of time just like the cpu-clock software event.
-
+Da análise de execução para as versões large\_naive e large\_interchange, foi produzida a seguinte tabela, que resume vários contadores de performance para as duas versões do kernel, para o dataset maior em estudo:
 
  \begin{table}[H]
   \caption{Performance events (naive vs. interchange) para o nó compute-431}
-  \label{table:search_events}
+  \label{table:search_events_large}
   \centering
   \begin{tabular}{ | l | r | r |   }
 
@@ -636,8 +632,7 @@ branch-misses	&  2200000 &  1900000 \\ \hline
 
 \subsection{Análise comparativa do número de amostras por evento de hardware para as versões large\_naive e large\_interchange}
 
-Da análise de execução para as versões large\_naive e large\_interchange, 
- large_naive and large_interchange, and collected event sample data for the most relevant hardware events. A comparative summary is shown in the following table.
+
 
 
  \begin{table}[H]
@@ -726,6 +721,27 @@ branch-misses	& 22 samples & 19 samples \\ \hline
 
 
   % that's all folks
+  
+  
+  
+\lstinputlisting[style=command]{../12_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../12_event_list.txt} %input de um ficheiro
+
+\lstinputlisting[style=command]{../13_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../13_perf_list_wc.txt} %input de um ficheiro
+
+\lstinputlisting[style=command]{../14_command.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../14_insns_per_cycle.txt} %input de um ficheiro
+
+\lstinputlisting[style=command]{../15_command_naive.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../15_perf_events_table_naive.txt} %input de um ficheiro
+
+\lstinputlisting[style=command]{../15_command_interchange.txt} %input de um ficheiro
+\lstinputlisting[language=C]{../15_perf_events_table_interchange.txt} %input de um ficheiro
+
+
+
+
   \end{document}
 
 
